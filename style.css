@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F2F2F2;
+    color: #260F01;
+    font-size: 16px;
+}
+
+header {
+    background: linear-gradient(90deg, #A66B38, #59310E);
+    color: #F2F2F2;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2.2rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+
+section {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #D99559;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #D99559;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+    color: #666;
+}
+
+
+#skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#skills li {
+    background: #59310E;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: transform 0.3s;
+}
+
+#skills li:hover {
+    transform: scale(1.1);
+}
+
+
+.project {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.project p {
+    color: #666;
+    margin-top: 10px;
+}
+
+.project:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+form label {
+    color: #333;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: none;
+    transition: border 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #D99559;
+}
+
+form button {
+    padding: 12px;
+    border: none;
+    background-color: #D99559;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #A66B38;
+}
+
+
+#responseMessage {
+    margin-top: 10px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .project {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+}
+
+
+
+a.img-link {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.img-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+a.img-link img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+a.img-link img:hover {
+    opacity: 0.9;
+}
+
+a.img-link {
+    border: 2px solid #260F01;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #260F01;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s;
+}
+
+#backToTop:hover {
+    opacity: 0.8;
+}
